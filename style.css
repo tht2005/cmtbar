@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+.relative-div {
+    position: relative;
+}
+
+#frame {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    width: 700px;
+    height: 500px;
+    background: white;
+}
+
+.comment-node {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    height: fit-content;
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.comment-node .comment-node {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.image-container img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: white;
+    border-bottom: 10px solid white;
+}
+.image-container .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+
+.comment-main {
+    padding-left: 20px;
+    max-width: 530px;
+}
+.comment-main > div > span:nth-child(1) {
+    font-weight: 700;
+    color: black;
+    font-size: 13px;
+}
+.comment-main > div:nth-child(1) > span:nth-child(2) {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+}
+.comment-main > p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 500px;
+}
+
+.button {
+    margin-top: 15px;
+}
+
+.button > span {
+    margin-left: 15px;
+}
+.button > span:nth-child(1) {
+    margin-left: 0;
+}
+.button > span:hover {
+    cursor: pointer;
+}
+
+.button > span:nth-child(2):hover, .button > span:nth-child(3):hover {
+    color: blue;
+}
+
+.like-count {
+    text-align: center;
+    margin: 0 5px;
+    font-weight: 900;
+    font-size: 13px;
+}
+.like svg {
+    display: inline;
+    width: 13px;
+    height: 8px;
+}
+.like svg:hover {
+    transform: scale(120%, 120%);
+}
+
+#frame::-webkit-scrollbar {
+    width: 10px;
+}
+#frame::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+#frame::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
